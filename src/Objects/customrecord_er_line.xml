@@ -1,0 +1,98 @@
+<customrecordtype scriptid="customrecord_er_line">
+  <accesstype>CUSTRECORDENTRYPERM</accesstype>
+  <allowattachments>F</allowattachments>
+  <allowquickadd>T</allowquickadd>
+  <allowquicksearch>T</allowquicksearch>
+  <allowuiaccess>T</allowuiaccess>
+  <description>Expense Report (Line)</description>
+  <enabledle>T</enabledle>
+  <enablekeywords>T</enablekeywords>
+  <enablesystemnotes>T</enablesystemnotes>
+  <includeinsearchmenu>T</includeinsearchmenu>
+  <includename>F</includename>
+  <isinactive>F</isinactive>
+  <recordname>Expense Report Line</recordname>
+  <showcreationdate>T</showcreationdate>
+  <showlastmodified>T</showlastmodified>
+
+  <customrecordcustomfields>
+
+    <!-- Parent pointer to Header (creates sublist recmachcustrecord_er_line_parent) -->
+    <customrecordcustomfield scriptid="custrecord_er_line_parent">
+      <accesslevel>2</accesslevel>
+      <fieldtype>SELECT</fieldtype>
+      <label>Expense Report</label>
+      <displaytype>NORMAL</displaytype>
+      <selectrecordtype>[customrecord_er_hdr]</selectrecordtype>
+      
+      <ismandatory>T</ismandatory>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+      <globalsearch>F</globalsearch>
+    </customrecordcustomfield>
+
+    <!-- Category (from customlist_er_category) -->
+    <customrecordcustomfield scriptid="custrecord_er_line_category">
+      <accesslevel>2</accesslevel>
+      <fieldtype>SELECT</fieldtype>
+      <label>Category</label>
+      <displaytype>NORMAL</displaytype>
+      <selectrecordtype>[customlist_er_category]</selectrecordtype>
+      <ismandatory>T</ismandatory>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+      <globalsearch>T</globalsearch>
+    </customrecordcustomfield>
+
+    <!-- Amount (Currency) -->
+    <customrecordcustomfield scriptid="custrecord_er_line_amount">
+      <accesslevel>2</accesslevel>
+      <fieldtype>CURRENCY</fieldtype>
+      <label>Amount</label>
+      <displaytype>NORMAL</displaytype>
+      <minvalue>0</minvalue>
+      <ismandatory>T</ismandatory>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+      <globalsearch>T</globalsearch>
+    </customrecordcustomfield>
+
+    <!-- Tax Code (from customlist_er_taxcode) -->
+    <customrecordcustomfield scriptid="custrecord_er_line_taxcode">
+      <accesslevel>2</accesslevel>
+      <fieldtype>SELECT</fieldtype>
+      <label>Tax Code</label>
+      <displaytype>NORMAL</displaytype>
+      <selectrecordtype>[customlist_er_taxcode]</selectrecordtype>
+      <ismandatory>F</ismandatory>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+      <globalsearch>T</globalsearch>
+    </customrecordcustomfield>
+
+    <!-- Tax Amount (Currency, Read Only) -->
+    <customrecordcustomfield scriptid="custrecord_er_line_taxamt">
+      <accesslevel>2</accesslevel>
+      <fieldtype>CURRENCY</fieldtype>
+      <label>Tax Amount</label>
+      <displaytype>NORMAL</displaytype>
+      <ismandatory>F</ismandatory>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+      <globalsearch>F</globalsearch>
+    </customrecordcustomfield>
+
+    <!-- Line Total (Currency, Read Only) -->
+    <customrecordcustomfield scriptid="custrecord_er_line_total">
+      <accesslevel>2</accesslevel>
+      <fieldtype>CURRENCY</fieldtype>
+      <label>Line Total</label>
+      <displaytype>NORMAL</displaytype>
+      <ismandatory>F</ismandatory>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+      <globalsearch>F</globalsearch>
+    </customrecordcustomfield>
+
+  </customrecordcustomfields>
+</customrecordtype>

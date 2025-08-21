@@ -1,0 +1,17 @@
+<usereventscript scriptid="customscript_customer_before_submit">
+    <description>Test Script From SDF</description>
+    <isinactive>F</isinactive>
+    <name>Customer Before Submit</name>
+    <notifyowner>T</notifyowner>
+    <scriptfile>[/SuiteScripts/Vamsee Test Scripts/customer_before_submit.js]</scriptfile>
+    <scriptdeployments>
+        <scriptdeployment scriptid="customdeploy_customer_before_submit">
+            <isdeployed>T</isdeployed>
+            <loglevel>DEBUG</loglevel>
+            <recordtype>CUSTOMER</recordtype>
+            <status>TESTING</status>
+        </scriptdeployment>
+    </scriptdeployments>
+</usereventscript> 
+
+              

@@ -1,0 +1,24 @@
+<customlist scriptid="customlist_er_category">
+  <description>Expense categories for lines.</description>
+  <isinactive>F</isinactive>
+  <ismatrixoption>F</ismatrixoption>
+  <isordered>T</isordered>
+  <name>ER: Category</name>
+  <customvalues>
+    <customvalue scriptid="val_er_cat_travel">
+      <abbreviation>TRV</abbreviation>
+      <isinactive>F</isinactive>
+      <value>Travel</value>
+    </customvalue>
+    <customvalue scriptid="val_er_cat_meals">
+      <abbreviation>MEAL</abbreviation>
+      <isinactive>F</isinactive>
+      <value>Meals</value>
+    </customvalue>
+    <customvalue scriptid="val_er_cat_office">
+      <abbreviation>OFF</abbreviation>
+      <isinactive>F</isinactive>
+      <value>Office</value>
+    </customvalue>
+  </customvalues>
+</customlist>

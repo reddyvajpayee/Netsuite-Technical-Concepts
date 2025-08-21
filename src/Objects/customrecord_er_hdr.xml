@@ -1,0 +1,46 @@
+<customrecordtype scriptid="customrecord_er_hdr">
+  <accesstype>CUSTRECORDENTRYPERM</accesstype>
+  <allowattachments>T</allowattachments>
+  <allowquickadd>T</allowquickadd>
+  <allowquicksearch>T</allowquicksearch>
+  <allowuiaccess>T</allowuiaccess>
+  <description>Expense Report (Header)</description>
+  <enabledle>T</enabledle>
+  <enablekeywords>T</enablekeywords>
+  <enablesystemnotes>T</enablesystemnotes>
+  <includeinsearchmenu>T</includeinsearchmenu>
+  <includename>T</includename>
+  <isinactive>F</isinactive>
+  <recordname>Expense Report Hdr</recordname>
+  <showcreationdate>T</showcreationdate>
+  <showlastmodified>T</showlastmodified>
+  <shownotes>T</shownotes>
+  <showowner>T</showowner>
+
+  <customrecordcustomfields>
+    <!-- Budget Cap (Currency) -->
+    <customrecordcustomfield scriptid="custrecord_er_hdr_budget_cap">
+      <accesslevel>2</accesslevel>
+      <fieldtype>CURRENCY</fieldtype>
+      <label>Budget Cap</label>
+      <displaytype>NORMAL</displaytype>
+      <minvalue>0</minvalue>
+      <globalsearch>T</globalsearch>
+      <ismandatory>F</ismandatory>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+    </customrecordcustomfield>
+
+    <!-- Header Total (Currency, Read Only) -->
+    <customrecordcustomfield scriptid="custrecord_er_hdr_total">
+      <accesslevel>2</accesslevel>
+      <fieldtype>CURRENCY</fieldtype>
+      <label>Total</label>
+      <displaytype>NORMAL</displaytype>
+      <globalsearch>T</globalsearch>
+      <ismandatory>F</ismandatory>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+    </customrecordcustomfield>
+  </customrecordcustomfields>
+</customrecordtype>

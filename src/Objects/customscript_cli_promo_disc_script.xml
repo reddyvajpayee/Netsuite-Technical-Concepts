@@ -1,0 +1,17 @@
+<clientscript scriptid="customscript_cli_promo_disc_script">
+    <description>CLI PROMO DISC SCRIPT</description>
+    <isinactive>F</isinactive>
+    <name>CLI PROMO DISC SCRIPT</name>
+    <notifyowner>T</notifyowner>
+    <scriptfile>[/SuiteScripts/Vamsee Test Scripts/cli_promo_discount_script.js]</scriptfile>
+    <scriptdeployments>
+        <scriptdeployment scriptid="customdeploy_cli_promo_disc_script">
+            <isdeployed>T</isdeployed>
+            <loglevel>DEBUG</loglevel>
+            <recordtype>[customrecord_pdr]</recordtype>
+            <status>TESTING</status>
+        </scriptdeployment>
+    </scriptdeployments>
+</clientscript> 
+
+              

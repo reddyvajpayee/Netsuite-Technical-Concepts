@@ -1,0 +1,24 @@
+<customlist scriptid="customlist_er_taxcode">
+  <description>Tax codes used for expense lines.</description>
+  <isinactive>F</isinactive>
+  <ismatrixoption>F</ismatrixoption>
+  <isordered>T</isordered>
+  <name>ER: Tax Code</name>
+  <customvalues>
+    <customvalue scriptid="val_er_tax_0">
+      <abbreviation>GST0</abbreviation>
+      <isinactive>F</isinactive>
+      <value>GST 0%</value>
+    </customvalue>
+    <customvalue scriptid="val_er_tax_5">
+      <abbreviation>GST5</abbreviation>
+      <isinactive>F</isinactive>
+      <value>GST 5%</value>
+    </customvalue>
+    <customvalue scriptid="val_er_tax_12">
+      <abbreviation>GST12</abbreviation>
+      <isinactive>F</isinactive>
+      <value>GST 12%</value>
+    </customvalue>
+  </customvalues>
+</customlist>

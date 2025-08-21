@@ -1,0 +1,17 @@
+<clientscript scriptid="customscript_cli_expense_record_script">
+    <description>CLI EXPENSE RECORD SCRIPT</description>
+    <isinactive>F</isinactive>
+    <name>CLI EXPENSE RECORD SCRIPT</name>
+    <notifyowner>T</notifyowner>
+    <scriptfile>[/SuiteScripts/Vamsee Test Scripts/cli_expense_record_script.js]</scriptfile>
+    <scriptdeployments>
+        <scriptdeployment scriptid="customdeploy_cli_expense_record_script">
+            <isdeployed>T</isdeployed>
+            <loglevel>DEBUG</loglevel>
+            <recordtype>[customrecord_er_hdr]</recordtype>
+            <status>TESTING</status>
+        </scriptdeployment>
+    </scriptdeployments>
+</clientscript> 
+
+              
