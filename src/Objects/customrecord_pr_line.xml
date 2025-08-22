@@ -1,0 +1,96 @@
+<customrecordtype scriptid="customrecord_pr_line">
+  <accesstype>CUSTRECORDENTRYPERM</accesstype>
+  <allowattachments>F</allowattachments>
+  <allowquickadd>T</allowquickadd>
+  <allowquicksearch>T</allowquicksearch>
+  <allowuiaccess>T</allowuiaccess>
+  <description>Purchase Request (Line)</description>
+  <enabledle>T</enabledle>
+  <enablekeywords>T</enablekeywords>
+  <enablesystemnotes>T</enablesystemnotes>
+  <includeinsearchmenu>T</includeinsearchmenu>
+  <includename>F</includename>
+  <isinactive>F</isinactive>
+  <recordname>Purchase Request Line</recordname>
+  <showcreationdate>T</showcreationdate>
+  <showlastmodified>T</showlastmodified>
+
+  <customrecordcustomfields>
+
+    <!-- Parent pointer (creates sublist recmachcustrecord_pr_parent) -->
+    <customrecordcustomfield scriptid="custrecord_pr_parent">
+      <accesslevel>2</accesslevel>
+      <fieldtype>SELECT</fieldtype>
+      <label>Purchase Request</label>
+      <displaytype>NORMAL</displaytype>
+      <isparent>T</isparent>
+      <selectrecordtype>[customrecord_pr_hdr]</selectrecordtype>
+      <onparentdelete>NO_ACTION</onparentdelete>
+      <ismandatory>T</ismandatory>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+      <globalsearch>F</globalsearch>
+    </customrecordcustomfield>
+
+    <!-- Item (List/Record > Item) -->
+    <customrecordcustomfield scriptid="custrecord_pr_item">
+      <accesslevel>2</accesslevel>
+      <fieldtype>SELECT</fieldtype>
+      <label>Item</label>
+      <displaytype>NORMAL</displaytype>
+      <selectrecordtype>[customlist_pr_items]</selectrecordtype> <!-- -6 = standard Item -->
+      <ismandatory>T</ismandatory>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+      <globalsearch>T</globalsearch>
+    </customrecordcustomfield>
+
+    <!-- Quantity (Integer) -->
+    <customrecordcustomfield scriptid="custrecord_pr_qty">
+      <accesslevel>2</accesslevel>
+      <fieldtype>INTEGER</fieldtype>
+      <label>Quantity</label>
+      <displaytype>NORMAL</displaytype>
+      <minvalue>0</minvalue>
+      <ismandatory>T</ismandatory>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+    </customrecordcustomfield>
+
+    <!-- Rate (Currency) -->
+    <customrecordcustomfield scriptid="custrecord_pr_rate">
+      <accesslevel>2</accesslevel>
+      <fieldtype>CURRENCY</fieldtype>
+      <label>Rate</label>
+      <displaytype>NORMAL</displaytype>
+      <minvalue>0</minvalue>
+      <ismandatory>T</ismandatory>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+    </customrecordcustomfield>
+
+    <!-- Amount (Currency, Read Only) -->
+    <customrecordcustomfield scriptid="custrecord_pr_amount">
+      <accesslevel>2</accesslevel>
+      <fieldtype>CURRENCY</fieldtype>
+      <label>Amount</label>
+      <displaytype>NORMAL</displaytype>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+      <globalsearch>F</globalsearch>
+    </customrecordcustomfield>
+
+    <!-- Status (List from customlist_pr_status) -->
+    <customrecordcustomfield scriptid="custrecord_pr_status">
+      <accesslevel>2</accesslevel>
+      <fieldtype>SELECT</fieldtype>
+      <label>Status</label>
+      <displaytype>NORMAL</displaytype>
+      <selectrecordtype>[customlist_pr_status]</selectrecordtype>
+      <ismandatory>T</ismandatory>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+    </customrecordcustomfield>
+
+  </customrecordcustomfields>
+</customrecordtype>
