@@ -1,0 +1,17 @@
+<clientscript scriptid="customscript_pr_client_sublist">
+    <description>CLI PR SUBLIST</description>
+    <isinactive>F</isinactive>
+    <name>CLI PR SUBLIST</name>
+    <notifyowner>T</notifyowner>
+    <scriptfile>[/SuiteScripts/Vamsee Test Scripts/cli_pr_client_sublist.js]</scriptfile>
+    <scriptdeployments>
+        <scriptdeployment scriptid="customdeploy_pr_client_sublist">
+            <isdeployed>T</isdeployed>
+            <loglevel>DEBUG</loglevel>
+            <recordtype>[customrecord_pr_hdr]</recordtype>
+            <status>TESTING</status>
+        </scriptdeployment>
+    </scriptdeployments>
+</clientscript> 
+
+              

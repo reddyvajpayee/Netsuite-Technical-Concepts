@@ -1,0 +1,54 @@
+<customrecordtype scriptid="customrecord_pr_hdr">
+  <accesstype>CUSTRECORDENTRYPERM</accesstype>
+  <allowattachments>T</allowattachments>
+  <allowquickadd>T</allowquickadd>
+  <allowquicksearch>T</allowquicksearch>
+  <allowuiaccess>T</allowuiaccess>
+  <description>Purchase Request (Header)</description>
+  <enabledle>T</enabledle>
+  <enablekeywords>T</enablekeywords>
+  <enablesystemnotes>T</enablesystemnotes>
+  <includeinsearchmenu>T</includeinsearchmenu>
+  <includename>T</includename>
+  <isinactive>F</isinactive>
+  <recordname>Purchase Request</recordname>
+  <showcreationdate>T</showcreationdate>
+  <showlastmodified>T</showlastmodified>
+  <shownotes>T</shownotes>
+  <showowner>T</showowner>
+
+  <customrecordcustomfields>
+    <!-- Budget Cap (Currency) -->
+    <customrecordcustomfield scriptid="custrecord_pr_budget_cap">
+      <accesslevel>2</accesslevel>
+      <fieldtype>CURRENCY</fieldtype>
+      <label>Budget Cap</label>
+      <displaytype>NORMAL</displaytype>
+      <minvalue>0</minvalue>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+      <globalsearch>T</globalsearch>
+    </customrecordcustomfield>
+
+    <!-- Lock Lines (Checkbox) -->
+    <customrecordcustomfield scriptid="custrecord_pr_lock_lines">
+      <accesslevel>2</accesslevel>
+      <fieldtype>CHECKBOX</fieldtype>
+      <label>Lock Lines</label>
+      <displaytype>NORMAL</displaytype>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+    </customrecordcustomfield>
+
+    <!-- Total (Currency, Read Only) -->
+    <customrecordcustomfield scriptid="custrecord_pr_total">
+      <accesslevel>2</accesslevel>
+      <fieldtype>CURRENCY</fieldtype>
+      <label>Total</label>
+      <displaytype>NORMAL</displaytype>
+      <storevalue>T</storevalue>
+      <showinlist>T</showinlist>
+      <globalsearch>F</globalsearch>
+    </customrecordcustomfield>
+  </customrecordcustomfields>
+</customrecordtype>

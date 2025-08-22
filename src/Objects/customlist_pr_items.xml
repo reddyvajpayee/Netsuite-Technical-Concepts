@@ -1,0 +1,34 @@
+<customlist scriptid="customlist_pr_items">
+  <description>List of available items for Purchase Requests</description>
+  <isinactive>F</isinactive>
+  <ismatrixoption>F</ismatrixoption>
+  <isordered>T</isordered>
+  <name>PR: Items</name>
+  <customvalues>
+    <customvalue scriptid="val_pr_item_laptop">
+      <abbreviation>LAP</abbreviation>
+      <isinactive>F</isinactive>
+      <value>Laptop</value>
+    </customvalue>
+    <customvalue scriptid="val_pr_item_monitor">
+      <abbreviation>MON</abbreviation>
+      <isinactive>F</isinactive>
+      <value>Monitor</value>
+    </customvalue>
+    <customvalue scriptid="val_pr_item_keyboard">
+      <abbreviation>KBD</abbreviation>
+      <isinactive>F</isinactive>
+      <value>Keyboard</value>
+    </customvalue>
+    <customvalue scriptid="val_pr_item_mouse">
+      <abbreviation>MSE</abbreviation>
+      <isinactive>F</isinactive>
+      <value>Mouse</value>
+    </customvalue>
+    <customvalue scriptid="val_pr_item_officechair">
+      <abbreviation>CHR</abbreviation>
+      <isinactive>F</isinactive>
+      <value>Office Chair</value>
+    </customvalue>
+  </customvalues>
+</customlist>
