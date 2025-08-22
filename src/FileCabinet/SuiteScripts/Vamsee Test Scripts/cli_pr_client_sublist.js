@@ -46,11 +46,11 @@ define(['N/currentRecord', 'N/ui/dialog',"N/ui/message"], (currentRecord, dialog
 
     if (budget && willBeTotal > budget) {
       
-      dialog.alert({
+       dialog.alert({
         title: 'Over Budget',
-        message: `Total ${total.toFixed(2)} exceeds budget cap ${budgetCap.toFixed(2)}.`
+        message: `Adding this line would exceed Budget Cap (${budget.toFixed(2)}). Current total: ${existingTotal.toFixed(2)}, new total would be: ${willBeTotal.toFixed(2)}.`
       });
-      
+
       /* var myMsg = message.create({
             title: "Over Budget",
             message: `Adding this line would exceed Budget Cap (${budget.toFixed(2)}). Current total: ${existingTotal.toFixed(2)}, new total would be: ${willBeTotal.toFixed(2)}.`,
