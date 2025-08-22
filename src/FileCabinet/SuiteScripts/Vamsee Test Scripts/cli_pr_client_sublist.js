@@ -5,7 +5,7 @@
 define(['N/currentRecord', 'N/ui/dialog',"N/ui/message"], (currentRecord, dialog, message) => {
   const SUBLIST_ID = 'recmachcustrecord_pr_parent';
 
-  //test file
+  
   // Field IDs (update if your IDs differ)
   const FLD_ITEM   = 'custrecord_pr_item';
   const FLD_QTY    = 'custrecord_pr_qty';
