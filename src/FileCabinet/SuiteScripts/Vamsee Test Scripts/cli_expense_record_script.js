@@ -10,6 +10,8 @@ define(['N/currentRecord', 'N/ui/dialog', 'N/ui/message'], (currentRecord, dialo
   }
 
   function fieldChanged(ctx) {
+
+    debugger;
     if (ctx.sublistId !== SUBLIST_ID) return;
 
     const rec = ctx.currentRecord;
@@ -32,6 +34,9 @@ define(['N/currentRecord', 'N/ui/dialog', 'N/ui/message'], (currentRecord, dialo
   }
 
   function validateField(ctx) {
+
+    debugger;
+
     if (ctx.sublistId !== SUBLIST_ID) return true;
 
     if (ctx.fieldId === 'custrecord_er_line_amount') {
@@ -40,12 +45,16 @@ define(['N/currentRecord', 'N/ui/dialog', 'N/ui/message'], (currentRecord, dialo
       if (amt > 10000) 
       {
 
-        var myMsg = message.create({
+        //dialog.alert({ title: 'Per-line Limit', message: 'Each line cannot exceed 10,000.' });
+     
+        alert("Each line cannot exceed 10,000");
+
+        /* var myMsg = message.create({
             title: "Per-line Limit",
             message: "Each line cannot exceed 10,000",
             type: message.Type.INFORMATION
         });
-        myMsg.show({ duration : 1500 })
+        myMsg.show({ duration : 1500 }) */
         return false;
       }
     }
