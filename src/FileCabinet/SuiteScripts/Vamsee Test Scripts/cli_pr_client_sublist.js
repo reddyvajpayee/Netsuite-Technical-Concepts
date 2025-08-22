@@ -46,13 +46,17 @@ define(['N/currentRecord', 'N/ui/dialog',"N/ui/message"], (currentRecord, dialog
 
     if (budget && willBeTotal > budget) {
       
-
-      var myMsg = message.create({
+      dialog.alert({
+        title: 'Over Budget',
+        message: `Total ${total.toFixed(2)} exceeds budget cap ${budgetCap.toFixed(2)}.`
+      });
+      
+      /* var myMsg = message.create({
             title: "Over Budget",
             message: `Adding this line would exceed Budget Cap (${budget.toFixed(2)}). Current total: ${existingTotal.toFixed(2)}, new total would be: ${willBeTotal.toFixed(2)}.`,
             type: message.Type.WARNING
         });
-        myMsg.show({ duration : 1500 })
+        myMsg.show({ duration : 1500 }) */
       return false;
     }
     return true;
@@ -98,13 +102,13 @@ define(['N/currentRecord', 'N/ui/dialog',"N/ui/message"], (currentRecord, dialog
       
       if (existingItem && Number(existingItem) === Number(item)) 
       {
-        //dialog.alert({ title: 'Duplicate Item', message: 'This Item is already on another line.' });
-         var myMsg = message.create({
+        dialog.alert({ title: 'Duplicate Item', message: 'This Item is already on another line.' });
+        /*  var myMsg = message.create({
             title: "Duplicate Item",
             message: "This Item is already on another line.",
             type: message.Type.WARNING
         });
-        myMsg.show({ duration : 1500 })
+        myMsg.show({ duration : 1500 }) */
         return false;
       }
     }
@@ -127,14 +131,14 @@ define(['N/currentRecord', 'N/ui/dialog',"N/ui/message"], (currentRecord, dialog
     // Block deletes if header is locked
     const locked = !!rec.getValue(HDR_LOCK);
     if (locked) {
-      //dialog.alert({ title: 'Locked', message: 'Lines are locked on this request and cannot be deleted.' });
+      dialog.alert({ title: 'Locked', message: 'Lines are locked on this request and cannot be deleted.' });
 
-      var myMsg = message.create({
+     /*  var myMsg = message.create({
             title: "Locked",
             message: "Lines are locked on this request and cannot be deleted.",
             type: message.Type.WARNING
         });
-        myMsg.show({ duration : 1500 })
+        myMsg.show({ duration : 1500 }) */
       
 
       return false;
@@ -143,14 +147,14 @@ define(['N/currentRecord', 'N/ui/dialog',"N/ui/message"], (currentRecord, dialog
     // Block deleting the only remaining line
     const lineCount = rec.getLineCount({ sublistId: SUBLIST_ID });
     if (lineCount <= 1) {
-      //dialog.alert({ title: 'At Least One Line Required', message: 'You must have at least one line on the request.' });
+      dialog.alert({ title: 'At Least One Line Required', message: 'You must have at least one line on the request.' });
       
-       var myMsg = message.create({
+       /* var myMsg = message.create({
             title: "At Least One Line Required",
             message: "You must have at least one line on the request.",
             type: message.Type.WARNING
         });
-        myMsg.show({ duration : 1500 })
+        myMsg.show({ duration : 1500 }) */
       
       return false;
     }
@@ -159,13 +163,15 @@ define(['N/currentRecord', 'N/ui/dialog',"N/ui/message"], (currentRecord, dialog
     const lineIdx = ctx.line; // index of the line being deleted
     const statusText = rec.getSublistText({ sublistId: SUBLIST_ID, fieldId: FLD_STATUS, line: lineIdx }) || '';
     if (statusText && statusText.toLowerCase() !== 'draft') {
-  
-      var myMsg = message.create({
+      
+       dialog.alert({ title: 'Cannot Delete', message: `Line status is "${statusText}". Only Draft lines can be deleted.` });
+    
+      /* var myMsg = message.create({
             title: "Cannot Delete",
             message: `Line status is "${statusText}". Only Draft lines can be deleted.` ,
             type: message.Type.WARNING
         });
-        myMsg.show({ duration : 1500 })
+        myMsg.show({ duration : 1500 }) */
       
       return false;
     }
