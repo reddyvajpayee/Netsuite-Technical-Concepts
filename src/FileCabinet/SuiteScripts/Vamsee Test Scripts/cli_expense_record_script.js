@@ -7,6 +7,7 @@ define(['N/currentRecord', 'N/ui/dialog', 'N/ui/message'], (currentRecord, dialo
 
   function pageInit(ctx) {
     // nothing special here, but you could default budget cap, etc.
+    //aler("TEST")
   }
 
   function fieldChanged(ctx) {
@@ -47,14 +48,14 @@ define(['N/currentRecord', 'N/ui/dialog', 'N/ui/message'], (currentRecord, dialo
 
         //dialog.alert({ title: 'Per-line Limit', message: 'Each line cannot exceed 10,000.' });
      
-        alert("Each line cannot exceed 10,000");
+        //alert("Each line cannot exceed 10,000");
 
-        /* var myMsg = message.create({
+        var myMsg = message.create({
             title: "Per-line Limit",
             message: "Each line cannot exceed 10,000",
             type: message.Type.INFORMATION
         });
-        myMsg.show({ duration : 1500 }) */
+        myMsg.show({ duration : 2500 }) 
         return false;
       }
     }

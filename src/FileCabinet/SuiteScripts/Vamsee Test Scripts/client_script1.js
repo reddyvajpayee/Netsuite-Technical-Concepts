@@ -46,11 +46,12 @@ define(['N/currentRecord', 'N/ui/dialog', 'N/format'], (currentRecord, dialog, f
         //alert("outDate : "+outDate);
         
         if (outDate <= inDate) {
-          dialog.alert({ title: 'Time Range', message: 'Checkout must be after check-in.' });
+          alert('Checkout must be after check-in');
           return false;
         }
       }
     }
+    
     return true;
   }
 
